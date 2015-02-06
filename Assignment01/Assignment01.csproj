@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DCEB8FD6-FD51-4C5A-BBA1-55B021737433}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Assignment01</RootNamespace>
+    <AssemblyName>Assignment01</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\ClassController.cs" />
+    <Compile Include="Controller\CourseController.cs" />
+    <Compile Include="Controller\LecturerController.cs" />
+    <Compile Include="Controller\ReportController.cs" />
+    <Compile Include="Controller\RoomController.cs" />
+    <Compile Include="Controller\SchoolManagementController.cs" />
+    <Compile Include="Controller\StudentController.cs" />
+    <Compile Include="Controller\TestHarness.cs" />
+    <Compile Include="Model\Class.cs" />
+    <Compile Include="Model\ClassPeriod.cs" />
+    <Compile Include="Model\Course.cs" />
+    <Compile Include="Model\Exception\SelectionException.cs" />
+    <Compile Include="Model\Exception\TimeException.cs" />
+    <Compile Include="Model\Lecturer.cs" />
+    <Compile Include="Model\Room.cs" />
+    <Compile Include="Model\Student.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\Validate.cs" />
+    <Compile Include="View\ClassManagementView.cs" />
+    <Compile Include="View\CourseManagementView.cs" />
+    <Compile Include="View\LecturerManagementView.cs" />
+    <Compile Include="View\MainView.cs" />
+    <Compile Include="View\ReportManagementView.cs" />
+    <Compile Include="View\RoomManagementView.cs" />
+    <Compile Include="View\StudentManagementView.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
